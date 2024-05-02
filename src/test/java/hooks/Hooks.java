@@ -22,7 +22,7 @@ public class Hooks {
         //inisiasi library selenium
         driver = new ChromeDriver(co);
 
-        String appUrl = "https://mentutor.firdauslabs.com/";
+        String appUrl = "https://mentutor-fe.vercel.app/";
         driver.get(appUrl);//fungsi untuk ngebuka link html
         driver.manage().window().maximize();//fungsi untuk memaximize browser
     }
