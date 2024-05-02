@@ -1,10 +1,10 @@
 package mentutor.pageObject;
 
 import mentutor.BasePage;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class AdminPage extends BasePage {
 
@@ -34,9 +34,6 @@ public class AdminPage extends BasePage {
     @FindBy(xpath = "//button[@id='btn-login']")
     private WebElement loginPageButtonAdmin;
 
-    @FindBy(xpath = "//h2[@class='swal2-title']")
-    private WebElement loginSuccessAdmin;
-
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled']")
     private WebElement loginSuccessButtonAdmin;
 
@@ -59,7 +56,19 @@ public class AdminPage extends BasePage {
     private WebElement submitButtonAdmin;
 
     @FindBy(xpath = "//h2[@class='swal2-title']")
-    private WebElement submitFailedAdmin;
+    private WebElement submitMessageAdmin;
+
+    @FindBy(css = "[index='1'] #delete-click")
+    private WebElement adminDelete;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement adminDeleteButton;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement adminOkButton;
+
+    @FindBy(xpath = "//div[@class='swal2-html-container']")
+    private WebElement adminOkButtonAfterDelete;
 
 
 //    FUNCTION
@@ -84,9 +93,6 @@ public class AdminPage extends BasePage {
         loginPageButtonAdmin.click();
     }
 
-    public boolean verifyLoginSuccessAdmin() {
-        return loginSuccessAdmin.isDisplayed();
-    }
 
     public void clickAdminOk() {
         waitForElementClickable(loginSuccessButtonAdmin);
@@ -106,7 +112,6 @@ public class AdminPage extends BasePage {
 
     public void clickAdminEdit() {
         waitForElementClickable(adminEdit);
-        waitForElementClickable(adminEdit);
         adminEdit.click();
     }
 
@@ -118,9 +123,34 @@ public class AdminPage extends BasePage {
         submitButtonAdmin.click();
     }
 
-    public boolean verifyEditFailedAdmin() {
-       waitForElementVisible(submitFailedAdmin);
-        return submitFailedAdmin.isDisplayed();
+    public void clearPlaceholder() {
+        adminEditName.clear();
     }
 
+    public void extractAndVerifyMessage(String expectedMessage) {
+        waitForElementVisible(submitMessageAdmin);
+        String actualMessage = submitMessageAdmin.getText();
+        Assert.assertEquals("Error message does not match", expectedMessage, actualMessage);
+    }
+
+    public void clickDeleteAdminButton() {
+        waitForElementClickable(adminDelete);
+        adminDelete.click();
+    }
+
+    public void clickYesDeleteAdminButton() {
+        waitForElementVisible(adminDeleteButton);
+        adminDeleteButton.click();
+    }
+
+    public void clickOKAfterEditDeleteButton() {
+        waitForElementVisible(adminOkButton);
+        adminOkButton.click();
+    }
+
+    public void extractAndVerifyMessageAfterDelete(String expectedMessage) {
+        waitForElementVisible(adminOkButtonAfterDelete);
+        String actualMessage = adminOkButtonAfterDelete.getText();
+        Assert.assertEquals("Error message does not match", expectedMessage, actualMessage);
+    }
 }

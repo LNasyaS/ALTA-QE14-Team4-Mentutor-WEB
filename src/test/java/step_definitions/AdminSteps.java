@@ -8,7 +8,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import mentutor.pageObject.AdminPage;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class AdminSteps {
 
@@ -58,8 +60,32 @@ public class AdminSteps {
         adminPage.clickSubmitButtonEditAdmin();
     }
 
-    @Then("Error message appear")
-    public void errorMessageAppear() {
-        Assert.assertTrue(adminPage.verifyEditFailedAdmin());
+    @And("User edit name empty and click submit")
+    public void userEditNameEmptyAndClickSubmit() {
+        adminPage.clearPlaceholder();
+        adminPage.clickSubmitButtonEditAdmin();
+
+    }
+
+    @Then("Message {string} appear")
+    public void messageAppearAndClickOk(String expectedMessage) {
+        adminPage.extractAndVerifyMessage(expectedMessage);
+    }
+
+    @And("User click delete")
+    public void userClickDelete() {
+        adminPage.clickDeleteAdminButton();
+    }
+
+
+    @And("User click yes delete button")
+    public void userClickYesDeleteButton() {
+        adminPage.clickYesDeleteAdminButton();
+    }
+
+
+    @Then("Message delete {string} appear")
+    public void messageDeleteAppearAndClickOk(String expectedMessage) {
+        adminPage.extractAndVerifyMessage(expectedMessage);
     }
 }
