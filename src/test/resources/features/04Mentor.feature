@@ -1,4 +1,4 @@
-@Mentor
+@04Mentor
 Feature: Mentor
   Description here
 
@@ -125,3 +125,14 @@ Feature: Mentor
     And User choose Images
     And User click add button
     Then Task successfully created
+
+  Scenario: Delete Tasks by mentor
+    Given User open the mentutor web
+    When User input "mentor.mentutor@gmail.com" as Email and "Mentor123$" as password and click login
+    Then User already on dashboard page
+    And User click task on dashboard menu
+    And the user clicks on the ellipsis delete icon
+    And selects delete on one of the available tasks
+    And A popup appears
+    And A popup appears, then click the delete button
+    Then user succes delete task

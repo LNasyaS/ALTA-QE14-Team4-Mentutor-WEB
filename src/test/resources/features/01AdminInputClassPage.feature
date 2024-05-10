@@ -1,4 +1,4 @@
-@Admin
+@01Admin
 Feature: Admin
   As admin I want to edit list class
 
@@ -11,7 +11,7 @@ Feature: Admin
     And User already on admin home page
     When User click input class button
     Then User already on admin input class page
-    When User input "Bahasa Korea" as class name and click add button
+    When User input "Kelas Menulis" as class name and click add button
     Then Message "Succes Created" appear
 
   @ATC7
@@ -38,7 +38,7 @@ Feature: Admin
     Then User can see edit class pop up page
     When User click active dropdown
     And User click non active button
-    And User click submit button
+    And User click submit button admin
     Then Message "Success Updated" appear
     When User click ok success update class button
     And User click close edit class button
@@ -56,9 +56,10 @@ Feature: Admin
     And User click edit class
     Then User can see edit class pop up page
     When User click change class name to null
-    And User click submit button
+    And User click submit button admin
     Then Message "Data cannot be empty" appear
 
+#    change the class name
   @ATC10
   Scenario: User edit list class name
     Given User open the admin web page
@@ -70,12 +71,12 @@ Feature: Admin
     When User click three dots class list
     And User click edit class
     Then User can see edit class pop up page
-    When User click change class name to "Bahasa Mandarin"
-    And User click submit button
+    When User click change class name to "Kelas Menjahit"
+    And User click submit button admin
     Then Message "Success Updated" appear
     When User click ok success update class button
     And User click close edit class button
-    Then User can see updated class name change to "Bahasa Mandarin"
+    Then User can see updated class name change to "Kelas Menjahit"
 
   @ATC11
   Scenario: User delete list class

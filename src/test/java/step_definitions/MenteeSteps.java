@@ -159,7 +159,8 @@ public class MenteeSteps {
     public void userSuccessfulyLogOut() {
         Assert.assertTrue(menteePage.SuccesLogOut());
     }
-//
+
+//  add image
     @And("Click image icon")
     public void clickImageIcon() {
         menteePage.ClickImageForum();

@@ -90,11 +90,12 @@ public class MenteePage extends BasePage {
 
     @FindBy(xpath= "/html/body/div[1]/div/div[2]/div[1]/div[1]/form/div[2]/label")
     private WebElement clickforumUploadImages;
-    @FindBy(xpath= "//input[@id='btn-gbr']")
-    private WebElement forumUploadImages;
 
-//    @FindBy(xpath= "/html/body/div[1]/div/div[2]/div[1]/div[1]/form/div[2]/label")
+//    @FindBy(xpath= "//input[@id='btn-gbr']")
 //    private WebElement forumUploadImages;
+
+    @FindBy(xpath= "/html/body/div[1]/div/div[2]/div[1]/div[1]/form/div[2]/label")
+    private WebElement forumUploadImages;
 
     //home view all task
     @FindBy(xpath= "//p[@id='view-task']")
@@ -105,7 +106,7 @@ public class MenteePage extends BasePage {
     private WebElement homeProfile;
 
     //download document
-    @FindBy(xpath= "//p[.='8u463ZbgL1HlkW7AWH2s-Latihan4_MirzaBennyKhawaja.docx']")
+    @FindBy(xpath= "//p[.='R5tyS5CfPAzrSe0VZnYj-TUGAS Introduction Management Tools - Google Dokumen.pdf']")
     private WebElement downloadDocument;
 
     //user log out

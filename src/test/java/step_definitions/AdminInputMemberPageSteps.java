@@ -45,6 +45,12 @@ public class AdminInputMemberPageSteps {
         adminInputMemberPage.clickAdminMemberClassBahasaKorea();
     }
 
+    @And("User choose class")
+    public void userChooseClass() {
+        adminInputMemberPage.clickInputMemberDropdownClass();
+        adminInputMemberPage.clickAdminMemberClass();
+    }
+
     @And("User input password {string}")
     public void userInputPassword(String password) {
         adminInputMemberPage.setAdminInputMemberPassword(password);
@@ -93,4 +99,6 @@ public class AdminInputMemberPageSteps {
         adminInputMemberPage.clickInputMemberDropdownClass();
         adminInputMemberPage.clickAdminMemberClassBiologi();
     }
+
+
 }

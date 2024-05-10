@@ -1,4 +1,4 @@
-@Admin
+@02Admin
 Feature: Admin
   As admin I want to input member
 
@@ -11,9 +11,9 @@ Feature: Admin
     And User already on admin home page
     When User click input member button
     Then User already on admin input member page
-    When User input name "Mentor Korea" and email "mentorkorea.mentutor@gmail.com"
+    When User input name "Mentor Yoga" and email "mentoryoga.mentutor@gmail.com"
     And User choose role as mentor
-    And User choose class Bahasa Korea
+    And User choose class
     And User input password "Qwer123$"
     And User click add member button
     Then Message "Register Success" appear
@@ -27,9 +27,9 @@ Feature: Admin
     And User already on admin home page
     When User click input member button
     Then User already on admin input member page
-    When User input name "Mentee Korea" and email "menteekorea.mentutor@gmail.com"
+    When User input name "Mentee Biologi" and email "menteebiologi.mentutor@gmail.com"
     And User choose role as mentee
-    And User choose class Bahasa Korea
+    And User choose class
     And User input password "Qwer123$"
     And User click add member button
     Then Message "Register Success" appear
@@ -77,7 +77,7 @@ Feature: Admin
     And User already on admin home page
     When User click input member button
     Then User already on admin input member page
-    When User input name "Mentee Korea" and email "menteekorea.mentutor@gmail.com"
+    When User input name "Mentee Biologi" and email "menteekorea.mentutor@gmail.com"
     And User choose role as mentee
     And User choose class Biologi
     And User input password "Qwer123$"
@@ -92,7 +92,7 @@ Feature: Admin
     And User already on admin home page
     When User click input member button
     Then User already on admin input member page
-    When User input name "Mentor Korea" and email "mentorkorea.mentutor@gmail.com"
+    When User input name "Mentor Enam" and email "mentor6.mentutor@gmail.com"
     And User choose role as mentor
     And User choose class Biologi
     And User input password "Qwer123$"

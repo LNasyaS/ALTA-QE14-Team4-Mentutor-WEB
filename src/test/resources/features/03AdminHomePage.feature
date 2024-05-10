@@ -1,4 +1,4 @@
-@Admin
+@03Admin
   Feature: Admin
     As admin I want to edit list mentor mentee
 
@@ -11,8 +11,8 @@
     And User already on admin home page
     When User click three dots
     And User click edit
-    And User edit "Nasya" as name and click submit
-    Then Message "Failed Updated" appear
+    And User edit "Nasya Mentor Apa Aja" as name and click submit
+    Then Message "Success Update" appear
 
 #    User edit list mentor mentee without input name at homepage
   @ATC2

@@ -41,6 +41,9 @@ public class AdminInputMemberPage extends BasePage {
     @FindBy(xpath = "//option[.='Bahasa Korea']")
     private WebElement adminInputMemberClassBahasaKorea;
 
+    @FindBy(xpath = "//option[.='Biologi 2']")
+    private WebElement adminInputMemberClass;
+
     @FindBy(xpath = "//option[.='Biologi 3']")
     private WebElement adminInputMemberClassBiologi;
     //option[.='Biologi 3']
@@ -108,6 +111,11 @@ public class AdminInputMemberPage extends BasePage {
     public void clickAdminMemberClassBahasaKorea() {
         waitForElementClickable(adminInputMemberClassBahasaKorea);
         adminInputMemberClassBahasaKorea.click();
+    }
+
+    public void clickAdminMemberClass() {
+        waitForElementClickable(adminInputMemberClass);
+        adminInputMemberClass.click();
     }
 
     public void clickAdminMemberClassBiologi() {

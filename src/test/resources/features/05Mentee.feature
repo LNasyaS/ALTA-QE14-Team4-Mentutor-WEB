@@ -1,4 +1,4 @@
-@Login
+@05Mentee
 Feature: Mentee
   Login and set up as Mentee
 
@@ -54,17 +54,16 @@ Feature: Mentee
     And Input comment here "Halo apakah, ada orang di sini?"
     Then Click icon send
 
-#comment add images (masih eror)
+#comment add images
   @TC6
   Scenario: Submit task
     Given User open the web mentutor
     When Email input "xwisekid@gmail.com" as userName and "Xwisekid123!" as password and click login
     Then User login succes and click ok
     When Click dashboard forum
-    And Click image icon
+#    And Click image icon
     And Chose file upload image
-#    And Input here "Seperti ini Gambarnya"
-#    Then User Click icon send
+#    And User Click icon send
 
   #home view all task
   @TC7

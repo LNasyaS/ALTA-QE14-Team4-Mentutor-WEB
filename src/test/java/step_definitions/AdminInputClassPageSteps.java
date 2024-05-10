@@ -71,8 +71,8 @@ public class AdminInputClassPageSteps {
         adminInputClassPage.clickAdminClassEditStatus();
     }
 
-    @And("User click submit button")
-    public void userClickSubmitButton() {
+    @And("User click submit button admin")
+    public void userClickSubmitButtonAdmin() {
         adminInputClassPage.clickAdminClassEditSubmitButton();
     }
 

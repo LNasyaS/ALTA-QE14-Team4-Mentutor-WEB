@@ -89,10 +89,10 @@ public class MentorPage extends BasePage {
     @FindBy(xpath = "//form[1]//li[@id='delete-click']")
     private WebElement clickDeleteTask;
 
-    @FindBy(xpath = "//form[2]//label[@id='icon-options']")
+    @FindBy(xpath = "//div[@class='h-screen ml-[50px] md:ml-[200px] lg:ml-[320px] relative p-6 md:px-14 md:pt-10 md:pb-10 ']/form[1]//label[@id='icon-options']")
     private WebElement click3IconDeleteTask;
 
-    @FindBy(xpath = "//form[2]//li[@id='delete-click']")
+    @FindBy(xpath = "//div[@class='h-screen ml-[50px] md:ml-[200px] lg:ml-[320px] relative p-6 md:px-14 md:pt-10 md:pb-10 ']/form[1]//li[@id='delete-click']")
     private WebElement clikDeleteTask2;
 
     @FindBy(xpath = "//div[@class='swal2-html-container']")
@@ -104,7 +104,7 @@ public class MentorPage extends BasePage {
     @FindBy(xpath = "//div[@class='swal2-html-container']")
     private WebElement userOkDelete1;
 
-    @FindBy(xpath = "//form[23]//p[@id='submit-click']")
+    @FindBy(xpath = "//div[@class='h-screen ml-[50px] md:ml-[200px] lg:ml-[320px] relative p-6 md:px-14 md:pt-10 md:pb-10 ']/form[1]//p[@id='submit-click']")
     private WebElement clikDetailTask1;
 
     @FindBy(xpath = "//h1[@class='text-putih text-lg lg:text-2xl font-medium mb-1']")
