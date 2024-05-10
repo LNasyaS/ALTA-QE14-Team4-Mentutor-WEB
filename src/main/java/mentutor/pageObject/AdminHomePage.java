@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AdminPage extends BasePage {
+public class AdminHomePage extends BasePage {
 
 //    public WebDriver driver;
 //
@@ -15,13 +15,11 @@ public class AdminPage extends BasePage {
 //        PageFactory.initElements(driver, this);
 //    }
 
-    public AdminPage(WebDriver driver) {
+    public AdminHomePage(WebDriver driver) {
         super(driver);
     }
 
 //    LOCATOR
-
-
     @FindBy(xpath = "//h1[@class='font-semibold text-4xl mb-10']")
     private WebElement loginPageTextAdmin;
 
@@ -70,9 +68,21 @@ public class AdminPage extends BasePage {
     @FindBy(xpath = "//div[@class='swal2-html-container']")
     private WebElement adminOkButtonAfterDelete;
 
+    @FindBy(xpath = "//div[@id='btn-logout']")
+    private WebElement adminLogoutButton;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement adminYesLogoutButton;
+
+    @FindBy(xpath = "//button[@class='swal2-cancel swal2-styled swal2-default-outline']")
+    private WebElement adminCancelLogoutButton;
+
+    @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled swal2-default-outline']")
+    private WebElement adminOkLogoutButton;
+
+
 
 //    FUNCTION
-
     public boolean verifyLoginPageAdmin() {
         boolean a = loginPageTextAdmin.isDisplayed();
         boolean b = loginPageEmailAdmin.isDisplayed();
@@ -152,5 +162,25 @@ public class AdminPage extends BasePage {
         waitForElementVisible(adminOkButtonAfterDelete);
         String actualMessage = adminOkButtonAfterDelete.getText();
         Assert.assertEquals("Error message does not match", expectedMessage, actualMessage);
+    }
+
+    public void clickAdminLogout() {
+        waitForElementClickable(adminLogoutButton);
+        adminLogoutButton.click();
+    }
+
+    public void clickAdminYesLogout() {
+        waitForElementClickable(adminYesLogoutButton);
+        adminYesLogoutButton.click();
+    }
+
+    public void clickAdminCancelLogout() {
+        waitForElementClickable(adminCancelLogoutButton);
+        adminCancelLogoutButton.click();
+    }
+
+    public void clickAdminOkLogout() {
+        waitForElementClickable(adminOkLogoutButton);
+        adminOkButton.click();
     }
 }
