@@ -10,7 +10,7 @@ This is our manual test case spreadsheet [**link**](https://docs.google.com/spre
 
 ### Test Overall
 
-![Result test overall](/docs/resultsAPI.PNG)
+![Result test overall](/docs/ResultsWeb.PNG)
 
 
 ### Tools and Technology Stack
