@@ -152,6 +152,11 @@ public class MentorPage extends BasePage {
     @FindBy(xpath = "//div[@class='swal2-html-container']")
     private WebElement successfullyLogout1;
 
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement successfullyCreated1;
+
+    @FindBy(xpath = "//h2[@class='swal2-title']")
+    private WebElement succescUpdatedProfile1;
 
 
 // FUNCTION
@@ -218,12 +223,14 @@ public class MentorPage extends BasePage {
 
     public void setClickAttachmentButton() {
         String absolutePath = new File("data/File.pdf").getAbsolutePath();
+        waitForElementVisible(clickAttachmentButton);
         clickAttachmentButton.sendKeys(absolutePath);
     }
 
     public void setClickImagesButton() {
         String absolutePath = new File("data/image.jpg").getAbsolutePath();
-        clickAttachmentButton.sendKeys(absolutePath);
+        waitForElementVisible(clickImagesButton);
+        clickImagesButton.sendKeys(absolutePath);
     }
 
     public void setClickAddButton() {
@@ -269,115 +276,115 @@ public class MentorPage extends BasePage {
         click3IconDeleteTask.click();
     }
 
-    public boolean popUpDeleteTask2(){
+    public boolean popUpDeleteTask2() {
         waitForElementVisible(popUpDeleteTask);
         return popUpDeleteTask.isDisplayed();
     }
 
-    public void clickForDeleteTask(){
+    public void clickForDeleteTask() {
         waitForElementClickable(clikDeleteTask2);
         clikDeleteTask2.click();
     }
 
-    public void clickYesDelete2(){
+    public void clickYesDelete2() {
         waitForElementClickable(clikYesDelete1);
         clikYesDelete1.click();
     }
 
-    public boolean userOkDelete2(){
+    public boolean userOkDelete2() {
         waitForElementVisible(userOkDelete1);
         return userOkDelete1.isDisplayed();
     }
 
-    public void clikDetailTask2(){
+    public void clikDetailTask2() {
         waitForElementClickable(clikDetailTask1);
         clikDetailTask1.click();
     }
 
-    public boolean detailTaskPage2(){
+    public boolean detailTaskPage2() {
         waitForElementVisible(detailTaskPage1);
         return detailTaskPage1.isDisplayed();
     }
 
-    public void clickPencilIcon2(){
+    public void clickPencilIcon2() {
         waitForElementClickable(clickPencilIcon1);
         clickPencilIcon1.click();
     }
 
-    public boolean popupEditPoints2(){
+    public boolean popupEditPoints2() {
         waitForElementVisible(popupEditPoints1);
         return popupEditPoints1.isDisplayed();
     }
 
-    public void inputScorePoint2(String inputSrocePoint3){
+    public void inputScorePoint2(String inputSrocePoint3) {
         waitForElementVisible(inputSrocePoint1);
         inputSrocePoint1.sendKeys(inputSrocePoint3);
     }
 
-    public void inputSubmitAtEditPoint2(){
+    public void inputSubmitAtEditPoint2() {
         waitForElementClickable(inputSubmitAtEditPoint1);
         inputSubmitAtEditPoint1.click();
     }
 
-    public boolean userOKSubmitted2(){
+    public boolean userOKSubmitted2() {
         waitForElementVisible(userOKSubmitted1);
         return userOKSubmitted1.isDisplayed();
     }
 
-    public void clikLogoForum2(){
+    public void clikLogoForum2() {
         waitForElementClickable(clickLogoForum1);
         clickLogoForum1.click();
     }
 
-    public boolean userAlreadyForumPage2(){
+    public boolean userAlreadyForumPage2() {
         waitForElementVisible(userAlreadyForumPage1);
         return userAlreadyForumPage1.isDisplayed();
     }
 
-    public void inputComment2(String inputComment3){
+    public void inputComment2(String inputComment3) {
         waitForElementVisible(inputComment1);
         inputComment1.sendKeys(inputComment3);
     }
 
-    public void clickSendButton2(){
+    public void clickSendButton2() {
         waitForElementClickable(clickSendButton1);
         clickSendButton1.click();
     }
 
-    public boolean successfullyComment2(){
+    public boolean successfullyComment2() {
         waitForElementVisible(successfullyComment1);
         return successfullyComment1.isDisplayed();
     }
 
-    public void userLogout2(){
+    public void userLogout2() {
         waitForElementClickable(userLogout1);
         userLogout1.click();
     }
 
-    public boolean popUpLogout2(){
+    public boolean popUpLogout2() {
         waitForElementVisible(popUpLogout1);
         return popUpLogout1.isDisplayed();
     }
 
-    public void buttonYesLogout2(){
+    public void buttonYesLogout2() {
         waitForElementClickable(buttonYesLogout1);
         buttonYesLogout1.click();
     }
 
-    public boolean successfullyLogout2(){
+    public boolean successfullyLogout2() {
         waitForElementVisible(successfullyLogout1);
         return successfullyLogout1.isDisplayed();
     }
 
+    public boolean successfullyCreated2() {
+        waitForElementVisible(successfullyCreated1);
+        return successfullyCreated1.isDisplayed();
+    }
 
-
-
-
-
-
-
-
-
+    public boolean succescUpdatedProfile2(){
+        waitForElementVisible(succescUpdatedProfile1);
+        return succescUpdatedProfile1.isDisplayed();
+    }
 
 
 }

@@ -20,7 +20,8 @@ Feature: Mentor
     Then User already on dashboard page
     When User click profile on dashboard menu
     And User click icon pencil
-    And User input "Jerry Alta QA 4" as Name and "123456" as password and click submit
+    And User input "Jerry Alta QA 4 Adlah Mentor Menturor Baru" as Name and "123456" as password and click submit
+    Then User succes update profile
 
 #    Add Tasks by Mentor
 
@@ -34,6 +35,7 @@ Feature: Mentor
     And User choose Attachment
     And User choose Images
     And User click add button
+    Then Task successfully created
 
 
 #  View All Task and Edit
@@ -110,3 +112,16 @@ Feature: Mentor
     And A logout popup appears
     And Click Yes, logout!
     Then successfully logged out
+
+# Creating a task with a due date that has already passed from the creation date
+  @TC10
+  Scenario: Creating a task with a due date that has already passed from the creation date
+    Given User open the mentutor web
+    When User input "mentor.mentutor@gmail.com" as Email and "Mentor123$" as password and click login
+    Then User already on dashboard page
+    When User click task on dashboard menu
+    And User input "TaskFailed" as Title , "TaskFailed@" as Description , "2020-12-12" as Due_Date
+    And User choose Attachment
+    And User choose Images
+    And User click add button
+    Then Task successfully created

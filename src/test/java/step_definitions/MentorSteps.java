@@ -193,4 +193,12 @@ public class MentorSteps {
     @Then("successfully logged out")
     public void successfullyLoggedOut() {mentorPage.successfullyLogout2();
     }
+
+    @Then("Task successfully created")
+    public void taskSuccessfullyCreated() {mentorPage.successfullyCreated2();
+    }
+
+    @Then("User succes update profile")
+    public void userSuccesUpdateProfile() {mentorPage.succescUpdatedProfile2();
+    }
 }
