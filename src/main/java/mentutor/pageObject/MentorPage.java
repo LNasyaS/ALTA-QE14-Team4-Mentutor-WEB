@@ -12,7 +12,7 @@ public class MentorPage extends BasePage {
     public MentorPage(WebDriver driver) {
         super(driver);
     }
-
+  
 
 //Locator
 
@@ -385,7 +385,6 @@ public class MentorPage extends BasePage {
         waitForElementVisible(succescUpdatedProfile1);
         return succescUpdatedProfile1.isDisplayed();
     }
-
 
 }
 
